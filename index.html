@@ -15,11 +15,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/icon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="icon" href="assets/icon-512.png" sizes="512x512">
   <meta name="theme-color" content="#0b0b0e">
+  <meta name="site-v" content="1792635175">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Habir Studios","url":"https://habir-studios.github.io/","logo":"https://habir-studios.github.io/assets/habir-studios-logo.svg","email":"officialhabirstudios@gmail.com","sameAs":["https://habir-studios.itch.io/"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Habir Studios","url":"https://habir-studios.github.io/","logo":"https://habir-studios.github.io/assets/habir-studios-logo.webp","email":"officialhabirstudios@gmail.com","sameAs":["https://habir-studios.itch.io/"]}</script>
   <style>
     :root {
       --ink: #0b0b0e; --ink-2: #131318; --ink-3: #1c1c23; --line: rgba(255,255,255,.09);
@@ -40,9 +42,7 @@
     .top { position: sticky; top: 0; z-index: 10; background: rgba(11,11,14,.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
     .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .brand svg { width: 34px; height: 34px; }
-    .brand b { font: 900 26px/1 var(--display); letter-spacing: .5px; }
-    .brand span { font: 600 13px/1 var(--body); letter-spacing: 6px; color: var(--steel); margin-left: 2px; }
+    .brand img { height: 46px; width: auto; display: block; }
     .nav { display: flex; gap: 22px; font-weight: 600; }
     .nav a { text-decoration: none; color: var(--steel); }
     .nav a:hover { color: var(--white); }
@@ -54,8 +54,8 @@
     .feature .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 48px; align-items: center; padding: 72px 0 64px; }
     .now { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--steel); margin: 0 0 14px; }
     .now i { width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px rgba(255,51,71,.2); }
-    .feature h1 { margin: 0; font: 900 clamp(64px, 10vw, 128px)/.86 var(--display); text-transform: uppercase; letter-spacing: -1px; }
-    .feature h1 em { display: block; font-style: normal; color: var(--red); }
+    .feature h1 { margin: 0; line-height: 0; }
+    .ek-title img { width: clamp(280px, 40vw, 520px); height: auto; margin-left: -8px; filter: drop-shadow(0 10px 30px rgba(0,0,0,.6)); }
     .pitch { max-width: 56ch; margin: 20px 0 0; font-size: 19px; color: #dfe1e6; }
     .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
     .facts li { padding: 5px 12px; border: 1px solid var(--line); background: rgba(255,255,255,.04); border-radius: 999px; font-size: 15px; font-weight: 600; color: var(--steel); }
@@ -117,6 +117,18 @@
     .team dt { font: 900 26px/1.05 var(--display); text-transform: uppercase; }
     .team dd { margin: 6px 0 0; color: var(--dim); font-weight: 600; }
 
+    .contact { width: min(460px, calc(100vw - 32px)); padding: 26px; border-radius: 16px; border: 1px solid var(--line); background: var(--ink-2); color: var(--white); }
+    .contact::backdrop { background: rgba(5,5,7,.8); }
+    .contact h3 { margin: 0 0 6px; font: 900 32px/1 var(--display); text-transform: uppercase; }
+    .contact p { margin: 8px 0; color: var(--steel); }
+    .ct-mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; background: var(--ink); border: 1px solid var(--line); border-radius: 10px; }
+    .ct-mail b { color: #fff; word-break: break-all; font-size: 18px; }
+    .ct-copy { margin-left: auto; padding: 6px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--ink-3); color: #fff; font: 700 15px var(--body); cursor: pointer; }
+    .ct-acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .ct-acts .btn { font-size: 17px; padding: 12px 18px; }
+    .ct-x { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: transparent; color: var(--steel); font-size: 26px; cursor: pointer; }
+    .upd { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; padding: 12px 20px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,.5); transition: opacity .25s ease, transform .25s ease; z-index: 20; }
+    .upd.show { opacity: 1; transform: translate(-50%, 0); }
     footer { margin-top: 64px; border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--dim); font-size: 15px; }
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
     footer nav { display: flex; gap: 18px; }
@@ -130,16 +142,13 @@
       .nav .hide-sm { display: none; }
       .block h2 { font-size: 36px; }
     }
-    @media (max-width: 420px) { .brand span { display: none; } .btn { padding: 13px 18px; font-size: 18px; } }
+    @media (max-width: 420px) { .brand img { height: 40px; } .btn { padding: 13px 18px; font-size: 18px; } }
   </style>
 </head>
 <body>
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Habir Studios home">
-        <svg viewBox="-80 -92 160 184" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ff3347"/><stop offset="1" stop-color="#b3101f"/></linearGradient></defs><path d="M0-88 76-44V44L0 88-76 44V-44Z" fill="#141418" stroke="url(#g)" stroke-width="9" stroke-linejoin="round"/><path d="M-40-46h20v34h40v-34h20v92h-20v-38h-40v38h-20z" fill="url(#g)"/><path d="M-52 14 52-22" stroke="#0b0b0e" stroke-width="8" stroke-linecap="round"/></svg>
-        <b>HABIR</b><span>STUDIOS</span>
-      </a>
+      <a class="brand" href="./" aria-label="Habir Studios home"><img src="assets/habir-studios-logo.webp" width="400" height="249" alt="Habir Studios"></a>
       <nav class="nav" aria-label="Main">
         <a href="#games">Games</a>
         <a href="#team">Team</a>
@@ -154,7 +163,7 @@
       <div class="wrap">
         <div>
           <p class="now"><i aria-hidden="true"></i>Our first game, out now</p>
-          <h1 id="ek-title">Endzone <em>Kings</em></h1>
+          <h1 id="ek-title" class="ek-title"><img src="assets/ek/ek-logo.webp" width="900" height="537" alt="Endzone Kings"></h1>
           <p class="pitch">3D arcade football you play right in your browser. Build a squad in Ultimate Team, go head to head online against real players, or run a franchise with your friends. Free, no download.</p>
           <ul class="facts">
             <li>Free to play</li><li>Browser and mobile</li><li>Online 1v1</li><li>Ultimate Team</li><li>Online Franchise</li>
@@ -165,7 +174,7 @@
           </div>
           <p class="ver" id="ek-ver">Season 1</p>
         </div>
-        <a class="art" href="/endzone-kings/" aria-label="Play Endzone Kings"><img src="assets/ek/cover.jpg" width="630" height="500" alt="Endzone Kings cover art: a red crown over the title, 3D arcade football"></a>
+        <a class="art" href="/endzone-kings/" aria-label="Play Endzone Kings"><img src="assets/ek/cover.jpg" width="630" height="500" alt="Endzone Kings logo: gold and purple lettering with a hand-drawn red football"></a>
       </div>
     </section>
 
@@ -219,15 +228,50 @@
     <button class="vbtn v-close" type="button" id="v-close" aria-label="Close">×</button>
   </dialog>
 
+  <dialog class="contact" id="contact" aria-labelledby="ct-h">
+    <h3 id="ct-h">Contact Habir Studios</h3>
+    <p>Questions, bugs, ideas or account help? Email us:</p>
+    <p class="ct-mail"><b id="ct-addr">officialhabirstudios@gmail.com</b><button type="button" class="ct-copy" id="ct-copy">Copy</button></p>
+    <div class="ct-acts">
+      <a class="btn play" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=officialhabirstudios@gmail.com&amp;su=Habir%20Studios" target="_blank" rel="noopener">Email us in Gmail</a>
+      <a class="btn" href="mailto:officialhabirstudios@gmail.com?subject=Habir%20Studios">Use my email app</a>
+    </div>
+    <button type="button" class="ct-x" id="ct-x" aria-label="Close">×</button>
+  </dialog>
+
+  <div class="upd" id="upd" role="status">New update! Refreshing…</div>
+
   <footer>
     <div class="wrap">
       <span>© <span id="yr">2026</span> Habir Studios</span>
-      <nav aria-label="Legal"><a href="mailto:officialhabirstudios@gmail.com">Contact</a><a href="/endzone-kings/privacy.html">Privacy</a><a href="/endzone-kings/terms.html">Terms</a><a href="https://habir-studios.itch.io/" rel="noopener">itch.io</a></nav>
+      <nav aria-label="Legal"><a href="#contact" id="contact-link">Contact</a><a href="/endzone-kings/privacy.html">Privacy Policy</a><a href="/endzone-kings/terms.html">Terms of Service</a><a href="https://habir-studios.itch.io/" rel="noopener">itch.io</a></nav>
     </div>
   </footer>
 
   <script type="module">
     document.getElementById('yr').textContent = new Date().getFullYear();
+    // live updates, like the game: every 10 seconds check whether the store page or Endzone Kings got an update.
+    // If so, show a heads-up and reload (it waits while you're looking at a screenshot)
+    {
+      const siteV0 = +document.querySelector('meta[name="site-v"]').content || 0;
+      const toast = document.getElementById('upd'); let pending = false;
+      const reload = () => { if (document.getElementById('viewer').open) return; toast.classList.add('show'); setTimeout(() => location.reload(), 2500); pending = 'done'; };
+      setInterval(async () => {
+        if (pending === 'done') return;
+        if (pending) return reload();
+        const [sv, gv] = await Promise.all([fetchV('/version.json'), fetchV('/endzone-kings/version.json')]);
+        if ((siteV0 && sv > siteV0) || (gameV0 && gv > gameV0)) { pending = true; reload(); }
+      }, 10000);
+    }
+    // contact: a box with the email, a copy button, Gmail and the email app (a plain email link does nothing on lots of computers)
+    {
+      const dlg = document.getElementById('contact'), copy = document.getElementById('ct-copy');
+      document.getElementById('contact-link').addEventListener('click', e => { e.preventDefault(); dlg.showModal(); });
+      document.getElementById('ct-x').onclick = () => dlg.close();
+      dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+      copy.onclick = async () => { try { await navigator.clipboard.writeText('officialhabirstudios@gmail.com'); copy.textContent = 'Copied!'; } catch (_) { const r = document.createRange(); r.selectNodeContents(document.getElementById('ct-addr')); getSelection().removeAllRanges(); getSelection().addRange(r); copy.textContent = 'Press Ctrl+C'; } setTimeout(() => { copy.textContent = 'Copy'; }, 2000); };
+      if (location.hash === '#contact') dlg.showModal();
+    }
     // screenshots: tap one to see it big, arrows (or ← →) to flip through, tap the picture to zoom in, Esc or × to close
     {
       const shots = [...document.querySelectorAll('.shot')], dlg = document.getElementById('viewer'), img = document.getElementById('v-img'), cap = document.getElementById('v-cap');
@@ -244,8 +288,10 @@
       dlg.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
     }
     // the game's current season and version, straight from its patch notes, so this page never goes stale
+    const fetchV = async u => { try { const r = await fetch(u + '?t=' + Date.now(), { cache: 'no-store' }); return r.ok ? +((await r.json()).v || 0) : 0; } catch (_) { return 0; } };
+    const gameV0 = await fetchV('/endzone-kings/version.json');
     try {
-      const { NOTES, SEASON } = await import('/endzone-kings/js/patchnotes.js');
+      const { NOTES, SEASON } = await import('/endzone-kings/js/patchnotes.js?v=' + gameV0);
       const v = `Season ${SEASON} · Version ${NOTES[0].v}`;
       document.getElementById('ek-ver').textContent = `${v} · Updated ${new Date(NOTES[0].date + 'T12:00:00').toLocaleDateString(undefined, { month: 'long', day: 'numeric' })}`;
       document.getElementById('ek-tag').textContent = v;
