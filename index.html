@@ -13,11 +13,13 @@
   <meta property="og:url" content="https://habir-studios.github.io/">
   <meta property="og:image" content="https://habir-studios.github.io/assets/ek/cover.jpg?v=2">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/icon-32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="assets/icon-180.png">
-  <link rel="icon" href="assets/icon-512.png" sizes="512x512">
+  <link rel="icon" href="favicon.ico?v=2" sizes="any">
+  <link rel="icon" href="assets/icon-32.png?v=2" sizes="32x32">
+  <link rel="icon" href="assets/icon-16.png?v=2" sizes="16x16">
+  <link rel="apple-touch-icon" href="assets/icon-180.png?v=2">
+  <link rel="icon" href="assets/icon-512.png?v=2" sizes="512x512">
   <meta name="theme-color" content="#0b0b0e">
-  <meta name="site-v" content="1792637609">
+  <meta name="site-v" content="1792637737">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Russo+One&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -40,10 +42,10 @@
 
     /* top bar */
     .top { position: sticky; top: 0; z-index: 10; background: rgba(11,11,14,.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-    .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 16px; }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 96px; gap: 16px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .brand img { height: 66px; width: auto; display: block; border-radius: 10px; }
+    .brand img { height: 74px; width: auto; display: block; border-radius: 12px; }
     .brand-t { font: 900 24px/1 var(--display); text-transform: uppercase; letter-spacing: .5px; color: #fff; }
     .nav { display: flex; gap: 22px; font-weight: 600; }
     .nav a { text-decoration: none; color: var(--steel); }
@@ -135,6 +137,8 @@
     .ltags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .ltags span { padding: 2px 9px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--steel); }
     .launch-h { padding: 40px 0 26px; }
+    .lh-row { display: flex; align-items: center; gap: clamp(16px, 3vw, 36px); flex-wrap: wrap; }
+    .lh-logo { height: clamp(96px, 13vw, 168px); width: auto; border-radius: 18px; box-shadow: 0 18px 44px rgba(0,0,0,.55); }
     .lh-big { margin: 0; font: 400 clamp(44px, 7vw, 92px)/1 'Russo One', var(--display); text-transform: uppercase; letter-spacing: 3px; background: linear-gradient(180deg, #ffffff 0%, #ffffff 40%, #6fa2ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .lh-sub { margin: 14px 0 0; max-width: 52ch; font-size: 20px; color: var(--steel); }
     .feature h2 { margin: 0; line-height: 0; }
@@ -179,7 +183,7 @@
 
   <main>
     <section class="launch-h wrap" aria-label="Habir Studios launcher">
-      <h1 class="lh-big">Launcher</h1>
+      <div class="lh-row"><img class="lh-logo" src="assets/habir-studios-badge.webp?v=3" width="520" height="352" alt=""><h1 class="lh-big">Launcher</h1></div>
       <p class="lh-sub">Every Habir Studios game in one place. Pick a game and play it free, right here in your browser.</p>
     </section>
     <section class="feature" aria-labelledby="ek-title">
