@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="icon" href="assets/icon-512.png" sizes="512x512">
   <meta name="theme-color" content="#0b0b0e">
-  <meta name="site-v" content="1792635806">
+  <meta name="site-v" content="1792636280">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -129,6 +129,14 @@
     .ct-x { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: transparent; color: var(--steel); font-size: 26px; cursor: pointer; }
     .upd { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; padding: 12px 20px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,.5); transition: opacity .25s ease, transform .25s ease; z-index: 20; }
     .upd.show { opacity: 1; transform: translate(-50%, 0); }
+    .pitch-2 { margin-top: 12px; font-size: 17px; color: var(--steel); }
+    .feats { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .feats div { padding: 20px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; }
+    .feats b { display: block; font: 900 26px/1.05 var(--display); text-transform: uppercase; margin-bottom: 6px; }
+    .feats p { margin: 0; color: var(--steel); font-size: 16px; }
+    .news { margin: 0 0 22px; padding: 18px 22px 18px 40px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; max-width: 900px; }
+    .news li { margin: 8px 0; color: #dfe1e6; }
+    .about { max-width: 72ch; display: grid; gap: 4px; color: #dfe1e6; font-size: 18px; }
     footer { margin-top: 64px; border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--dim); font-size: 15px; }
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
     footer nav { display: flex; gap: 18px; }
@@ -148,11 +156,14 @@
 <body>
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Habir Studios home"><img src="assets/habir-studios-badge.webp" width="360" height="259" alt="Habir Studios"></a>
+      <a class="brand" href="./" aria-label="Habir Studios home"><img src="assets/habir-studios-badge.webp?v=2" width="360" height="259" alt="Habir Studios"></a>
       <nav class="nav" aria-label="Main">
         <a href="#games">Games</a>
-        <a href="#team">Team</a>
-        <a class="hide-sm" href="https://habir-studios.itch.io/" rel="noopener">itch.io</a>
+        <a href="#features">Features</a>
+        <a href="#news">News</a>
+        <a class="hide-sm" href="#about">About</a>
+        <a class="hide-sm" href="#team">Team</a>
+        <a href="#contact" class="contact-open">Contact</a>
       </nav>
     </div>
   </header>
@@ -164,7 +175,8 @@
         <div>
           <p class="now"><i aria-hidden="true"></i>Our first game, out now</p>
           <h1 id="ek-title" class="ek-title"><img src="assets/ek/ek-logo-card.webp?v=2" width="960" height="660" alt="Endzone Kings"></h1>
-          <p class="pitch">3D arcade football you play right in your browser. Build a squad in Ultimate Team, go head to head online against real players, or run a franchise with your friends. Free, no download.</p>
+          <p class="pitch">Fast, hard-hitting 3D arcade football you play right in your browser, on your computer or your phone. Call your own plays, throw lasers into tight windows, juke defenders and lay out for diving catches in packed night-game stadiums.</p>
+          <p class="pitch pitch-2">Build your dream squad in Ultimate Team by opening packs and trading with real players, take it online in head-to-head games, climb from Bronze to Kings in ranked, or run a whole league with your friends in Online Franchise. Season, Franchise, practice, a playbook viewer and a coach-led tutorial are all in there too. Completely free, no download, no ads and nothing to buy.</p>
           <ul class="facts">
             <li>Free to play</li><li>Browser and mobile</li><li>Online 1v1</li><li>Ultimate Team</li><li>Online Franchise</li>
           </ul>
@@ -187,6 +199,26 @@
       </div>
     </div>
 
+    <section class="block wrap" id="features" aria-labelledby="features-h">
+      <h2 id="features-h">What's in Endzone Kings</h2>
+      <p class="sub">Every mode is free and works on computer and phone.</p>
+      <div class="feats">
+        <div><b>Ultimate Team</b><p>Open packs, train players, build a lineup and trade cards with real players. Take on Solo Battles, monthly theme challenges and program rewards.</p></div>
+        <div><b>Online H2H</b><p>Play a friend with a game code or anyone from the lobby. Your Online H2H record and rank only count games against real people.</p></div>
+        <div><b>Online Franchise</b><p>Start a public or private league with up to 16 players, then draft, trade and play your way to the Kings Bowl. Unlocks at level 5.</p></div>
+        <div><b>Season and Franchise</b><p>Pick a team and chase a title against the CPU over a full season, or run a franchise for years with drafts, contracts and progression.</p></div>
+        <div><b>Ranked and rewards</b><p>Climb from Bronze to Kings, earn coins and XP, claim daily rewards, finish challenges and unlock achievements and celebrations.</p></div>
+        <div><b>Community</b><p>Live leaderboards, player profiles, followers, messages, clips of your best plays, and watching friends' games live.</p></div>
+      </div>
+    </section>
+
+    <section class="block wrap" id="news" aria-labelledby="news-h">
+      <h2 id="news-h">Latest update</h2>
+      <p class="sub" id="news-sub">What's new in Endzone Kings.</p>
+      <ul class="news" id="news-list"><li>Loading the latest patch notes…</li></ul>
+      <a class="btn" href="/endzone-kings/">Play the update</a>
+    </section>
+
     <section class="block wrap" id="games" aria-labelledby="games-h">
       <h2 id="games-h">Games</h2>
       <p class="sub">Everything we've made. All free, all in your browser.</p>
@@ -206,6 +238,14 @@
             <small>In the works. Keep an eye on this spot.</small>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="block wrap" id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About Habir Studios</h2>
+      <div class="about">
+        <p>Habir Studios is a small independent game studio. We make free games you can play instantly in a browser, with no downloads, no ads and nothing to buy, so anyone can jump in with friends.</p>
+        <p>Endzone Kings is our first game. We update it all the time based on what players tell us, and every change shows up in the patch notes inside the game. Got an idea or found a bug? Use the Feedback button in the game or <a href="#contact" class="contact-open">contact us</a>.</p>
       </div>
     </section>
 
@@ -266,7 +306,7 @@
     // contact: a box with the email, a copy button, Gmail and the email app (a plain email link does nothing on lots of computers)
     {
       const dlg = document.getElementById('contact'), copy = document.getElementById('ct-copy');
-      document.getElementById('contact-link').addEventListener('click', e => { e.preventDefault(); dlg.showModal(); });
+      document.querySelectorAll('#contact-link, .contact-open').forEach(a => a.addEventListener('click', e => { e.preventDefault(); dlg.showModal(); }));
       document.getElementById('ct-x').onclick = () => dlg.close();
       dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
       copy.onclick = async () => { try { await navigator.clipboard.writeText('officialhabirstudios@gmail.com'); copy.textContent = 'Copied!'; } catch (_) { const r = document.createRange(); r.selectNodeContents(document.getElementById('ct-addr')); getSelection().removeAllRanges(); getSelection().addRange(r); copy.textContent = 'Press Ctrl+C'; } setTimeout(() => { copy.textContent = 'Copy'; }, 2000); };
@@ -295,6 +335,9 @@
       const v = `Season ${SEASON} · Version ${NOTES[0].v}`;
       document.getElementById('ek-ver').textContent = `${v} · Updated ${new Date(NOTES[0].date + 'T12:00:00').toLocaleDateString(undefined, { month: 'long', day: 'numeric' })}`;
       document.getElementById('ek-tag').textContent = v;
+      const n = NOTES[0], items = [...(n.added || []), ...(n.fixed || [])].slice(0, 8), esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+      document.getElementById('news-sub').textContent = `Version ${n.v}, ${new Date(n.date + 'T12:00:00').toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}. The full notes are in the game.`;
+      document.getElementById('news-list').innerHTML = items.map(t => `<li>${esc(t)}</li>`).join('');
     } catch (_) {}
   </script>
 </body>
