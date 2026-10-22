@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="icon" href="assets/icon-512.png" sizes="512x512">
   <meta name="theme-color" content="#0b0b0e">
-  <meta name="site-v" content="1792636971">
+  <meta name="site-v" content="1792637126">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -72,7 +72,8 @@
 
     /* screenshots */
     .shots { padding: 28px 0 8px; }
-    .strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+    .strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+    @media (max-width: 760px) { .strip { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; } .strip::-webkit-scrollbar { display: none; } }
     .shot { padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 10px; scroll-snap-align: start; }
     .strip img { width: 100%; aspect-ratio: 1280 / 760; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); transition: border-color .15s ease; }
     .shot:hover img { border-color: rgba(255,51,71,.6); }
