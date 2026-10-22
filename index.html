@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Habir Studios: Free Browser Games</title>
+  <title>Habir Launcher: Free Browser Games by Habir Studios</title>
   <meta name="description" content="Habir Studios makes free games you play right in your browser. Our first game is Endzone Kings, a free 3D arcade football game with Ultimate Team, online head to head and franchise leagues.">
   <meta name="author" content="Habir Studios">
   <link rel="canonical" href="https://habir-studios.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Habir Studios">
+  <meta property="og:title" content="Habir Launcher">
   <meta property="og:description" content="Free games you play in your browser. Now playing: Endzone Kings.">
   <meta property="og:url" content="https://habir-studios.github.io/">
   <meta property="og:image" content="https://habir-studios.github.io/assets/ek/cover.jpg?v=2">
@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="icon" href="assets/icon-512.png" sizes="512x512">
   <meta name="theme-color" content="#0b0b0e">
-  <meta name="site-v" content="1792636280">
+  <meta name="site-v" content="1792636690">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -42,7 +42,9 @@
     .top { position: sticky; top: 0; z-index: 10; background: rgba(11,11,14,.86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
     .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .brand img { height: 48px; width: auto; display: block; border-radius: 9px; }
+    .brand-t { font: 900 24px/1 var(--display); text-transform: uppercase; letter-spacing: .5px; color: #fff; }
     .nav { display: flex; gap: 22px; font-weight: 600; }
     .nav a { text-decoration: none; color: var(--steel); }
     .nav a:hover { color: var(--white); }
@@ -129,6 +131,8 @@
     .ct-x { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: transparent; color: var(--steel); font-size: 26px; cursor: pointer; }
     .upd { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; padding: 12px 20px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,.5); transition: opacity .25s ease, transform .25s ease; z-index: 20; }
     .upd.show { opacity: 1; transform: translate(-50%, 0); }
+    .ltags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .ltags span { padding: 2px 9px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--steel); }
     .pitch-2 { margin-top: 12px; font-size: 17px; color: var(--steel); }
     .feats { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
     .feats div { padding: 20px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; }
@@ -156,7 +160,7 @@
 <body>
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Habir Studios home"><img src="assets/habir-studios-badge.webp?v=2" width="360" height="259" alt="Habir Studios"></a>
+      <a class="brand" href="./" aria-label="Habir Launcher home"><img src="assets/habir-studios-badge.webp?v=2" width="360" height="259" alt="Habir Studios"><span class="brand-t">Launcher</span></a>
       <nav class="nav" aria-label="Main">
         <a href="#games">Games</a>
         <a href="#features">Features</a>
@@ -178,7 +182,7 @@
           <p class="pitch">Fast, hard-hitting 3D arcade football you play right in your browser, on your computer or your phone. Call your own plays, throw lasers into tight windows, juke defenders and lay out for diving catches in packed night-game stadiums.</p>
           <p class="pitch pitch-2">Build your dream squad in Ultimate Team by opening packs and trading with real players, take it online in head-to-head games, climb from Bronze to Kings in ranked, or run a whole league with your friends in Online Franchise. Season, Franchise, practice, a playbook viewer and a coach-led tutorial are all in there too. Completely free, no download, no ads and nothing to buy.</p>
           <ul class="facts">
-            <li>Free to play</li><li>Browser and mobile</li><li>Online 1v1</li><li>Ultimate Team</li><li>Online Franchise</li>
+            <li>Free to play</li><li>No download</li><li>No ads</li><li>Browser and mobile</li><li>Sports</li><li>Football</li><li>3D</li><li>Arcade</li><li>Multiplayer</li><li>Single player</li><li>Online 1v1</li><li>Ultimate Team</li><li>Online Franchise</li><li>Ranked</li><li>Trading</li><li>Season</li><li>Leaderboards</li><li>Controller support</li>
           </ul>
           <div class="cta">
             <a class="btn play" href="/endzone-kings/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>Play free</a>
@@ -220,14 +224,15 @@
     </section>
 
     <section class="block wrap" id="games" aria-labelledby="games-h">
-      <h2 id="games-h">Games</h2>
-      <p class="sub">Everything we've made. All free, all in your browser.</p>
+      <h2 id="games-h">Library</h2>
+      <p class="sub">Every Habir Studios game, all free and all in your browser. Pick one and play.</p>
       <div class="library">
         <a class="game" href="/endzone-kings/">
           <img src="assets/ek/cover.jpg?v=2" width="630" height="500" loading="lazy" alt="">
           <div class="meta">
             <b>Endzone Kings</b>
             <small>3D arcade football</small>
+            <div class="ltags"><span>Sports</span><span>Multiplayer</span><span>3D</span><span>Free</span></div>
             <div class="row"><span class="tag" id="ek-tag">Season 1</span><span class="get">Play</span></div>
           </div>
         </a>
