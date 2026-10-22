@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="icon" href="assets/icon-512.png" sizes="512x512">
   <meta name="theme-color" content="#0b0b0e">
-  <meta name="site-v" content="1792636810">
+  <meta name="site-v" content="1792636971">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -133,6 +133,10 @@
     .upd.show { opacity: 1; transform: translate(-50%, 0); }
     .ltags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .ltags span { padding: 2px 9px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--steel); }
+    .launch-h { padding: 44px 0 30px; }
+    .lh-big { margin: 0; font: 900 clamp(76px, 15vw, 200px)/.82 var(--display); text-transform: uppercase; letter-spacing: -1px; background: linear-gradient(180deg, #ffffff 0%, #ffffff 45%, #9aa6c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lh-sub { margin: 14px 0 0; max-width: 52ch; font-size: 20px; color: var(--steel); }
+    .feature h2 { margin: 0; line-height: 0; }
     .pitch-2 { margin-top: 12px; font-size: 17px; color: var(--steel); }
     .feats { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
     .feats div { padding: 20px; background: var(--ink-2); border: 1px solid var(--line); border-radius: 14px; }
@@ -173,12 +177,16 @@
   </header>
 
   <main>
+    <section class="launch-h wrap" aria-label="Habir Studios launcher">
+      <h1 class="lh-big">Launcher</h1>
+      <p class="lh-sub">Every Habir Studios game in one place. Pick a game and play it free, right here in your browser.</p>
+    </section>
     <section class="feature" aria-labelledby="ek-title">
       <div class="bg" aria-hidden="true"></div>
       <div class="wrap">
         <div>
           <p class="now"><i aria-hidden="true"></i>Our first game, out now</p>
-          <h1 id="ek-title" class="ek-title"><img src="assets/ek/ek-logo-card.webp?v=2" width="960" height="660" alt="Endzone Kings"></h1>
+          <h2 id="ek-title" class="ek-title"><img src="assets/ek/ek-logo-card.webp?v=2" width="960" height="660" alt="Endzone Kings"></h2>
           <p class="pitch">Fast, hard-hitting 3D arcade football you play right in your browser, on your computer or your phone. Call your own plays, throw lasers into tight windows, juke defenders and lay out for diving catches in packed night-game stadiums.</p>
           <p class="pitch pitch-2">Build your dream squad in Ultimate Team by opening packs and trading with real players, take it online in head-to-head games, climb from Bronze to Kings in ranked, or run a whole league with your friends in Online Franchise. Season, Franchise, practice, a playbook viewer and a coach-led tutorial are all in there too. Completely free, no download, no ads and nothing to buy.</p>
           <ul class="facts">
